@@ -1,0 +1,16 @@
+{
+  "name": "ember-error-support",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Apply error states to text fields",
+  "dependencies": {
+    "kelonye/ember": "*"
+  },
+  "development": {
+    "timoxley/assert": "*",
+    "kelonye/ember-validate": "*"
+  },
+  "scripts": [
+    "index.js"
+  ]
+}
