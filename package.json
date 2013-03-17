@@ -4,11 +4,10 @@
   "license": "MIT",
   "description": "",
   "devDependencies": {
-    "coffee-script": "*",
     "mocha-phantomjs": "*",
+    "mocha": "*",
     "component": "*",
-    "jade": "*",
-    "mocha": "*"
-  },
-  "script": "npm install && component install && make test"
+    "coffee-script": "*",
+    "jade": "*"
+  }
 }

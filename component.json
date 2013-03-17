@@ -11,6 +11,7 @@
     "kelonye/ember-validate": "*"
   },
   "scripts": [
-    "index.js"
+    "index.js",
+    "lib/index.js"
   ]
 }

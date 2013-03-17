@@ -1,6 +1,7 @@
 syntax: glob
 
-build
-components
-node_modules
+test/*.js
+build/
+components/
+node_modules/
 npm-debug.log
