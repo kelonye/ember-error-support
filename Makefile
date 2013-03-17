@@ -35,6 +35,6 @@ test/support/index.html: test/support/index.jade
 	jade < $< --path $< > $@
 
 clean:
-	rm -rf lib build
+	@rm -rf lib build test/lib test/support/index.html
 
 .PHONY: clean test
