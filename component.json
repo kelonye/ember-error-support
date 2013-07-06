@@ -1,8 +1,6 @@
 {
   "name": "ember-error-support",
-  "repo": "kelonye/ember-error-support",
   "version": "0.0.1",
-  "license": "MIT",
   "description": "Apply error states to text fields",
   "dependencies": {
     "kelonye/ember": "*"
@@ -14,5 +12,6 @@
   "scripts": [
     "index.js",
     "lib/index.js"
-  ]
+  ],
+  "license": "MIT"
 }

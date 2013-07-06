@@ -1,13 +1,10 @@
 {
   "name": "ember-error-support",
   "version": "0.0.1",
-  "license": "MIT",
   "description": "",
   "devDependencies": {
-    "mocha-phantomjs": "*",
     "mocha": "*",
-    "component": "*",
-    "coffee-script": "*",
-    "jade": "*"
-  }
+    "component-hooks": "*"
+  },
+  "license": "MIT"
 }

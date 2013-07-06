@@ -5,17 +5,19 @@ Adds .error class binding to an ember object using [kelonye/ember-validate](http
 Install
 ---
 
-```
-component install kelonye/ember-error-support
-```
+    $ component install kelonye/ember-error-support
 
-Example
+Use
 ---
 
-```
-Em.TextSupport.reopen require 'ember-error-support'
-```
+    $ Em.TextSupport.reopen require 'ember-error-support'
 
+
+Test
+---
+
+    $ make test
+  
 License
 ---
 
