@@ -9,8 +9,8 @@
     "timoxley/assert": "*",
     "kelonye/ember-validate": "*"
   },
+  "main": "lib/index.js",
   "scripts": [
-    "index.js",
     "lib/index.js"
   ],
   "license": "MIT"
