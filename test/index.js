@@ -33,30 +33,27 @@ describe('Error Support:', function() {
     assert.equal(textField.$().hasClass('error'), false);
   });
   it('inputs have .error class when value becomes inValid', function() {
-    Em.run(function() {
-      person.validate();
-    });
-    assert.equal(textField.get('value'), '');
-    assert.equal(textField.get('error'), '');
-    assert.equal(textField.get('isValid'), false);
-    assert.equal(textField.$().hasClass('error'), true);
-    Em.run(function() {
+    person.validate(function(){
+      assert.equal(textField.get('value'), '');
+      assert.equal(textField.get('error'), '');
+      assert.equal(textField.get('isValid'), false);
+      assert.equal(textField.$().hasClass('error'), true);
       person.set('email', 'g');
-      person.validate();
+      person.validate(function(){
+        assert.equal(textField.get('value'), 'g');
+        assert.equal(textField.get('error'), '¬ wrong email format');
+        assert.equal(textField.get('isValid'), false);
+        assert.equal(textField.$().hasClass('error'), true);
+      });
     });
-    assert.equal(textField.get('value'), 'g');
-    assert.equal(textField.get('error'), '¬ wrong email format');
-    assert.equal(textField.get('isValid'), false);
-    assert.equal(textField.$().hasClass('error'), true);
   });
   it('inputs value is ok', function() {
-    Em.run(function() {
-      person.set('email', 'g@g.g');
-      person.validate();
+    person.set('email', 'g@g.g');
+    person.validate(function(){
+      assert.equal(textField.get('value'), 'g@g.g');
+      assert.equal(textField.get('error'), undefined);
+      assert.equal(textField.get('isValid'), true);
+      assert.equal(textField.$().hasClass('error'), false);
     });
-    assert.equal(textField.get('value'), 'g@g.g');
-    assert.equal(textField.get('error'), undefined);
-    assert.equal(textField.get('isValid'), true);
-    assert.equal(textField.$().hasClass('error'), false);
   });
 });
