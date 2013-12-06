@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Apply error states to text fields",
   "dependencies": {
-    "kelonye/ember": "*"
+    "kelonye/ember": "1.0.0-rc6"
   },
   "development": {
     "timoxley/assert": "*",
