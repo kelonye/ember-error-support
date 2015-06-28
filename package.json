@@ -1,7 +1,6 @@
 {
   "name": "ember-error-support",
-  "version": "0.0.1",
-  "description": "",
+  "private": true,
   "devDependencies": {
     "mocha": "*",
     "component-hooks": "*"
