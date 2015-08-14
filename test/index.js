@@ -10,13 +10,12 @@ var Person = Em.Object.extend(ValidateMixin, {
 describe('Error Support:', function() {
   beforeEach(function() {
     person = Person.create({
-      email: ''
+      email: null
     });
     Em.TextSupport.reopen(require('ember-error-support'));
     textField = Em.TextField.create({
-      'for': 'email',
-      valueBinding: 'context.email',
-      context: person
+      errorBinding: 'model._errors.email',
+      valueBinding: 'model.email',
     });
     Em.run(function() {
       textField.append();
@@ -27,14 +26,14 @@ describe('Error Support:', function() {
     textField.destroy();
   });
   it("input's @error==undefined and @isValid==true", function() {
-    assert.equal(textField.get('value'), '');
+    assert.equal(textField.get('value'), null);
     assert.equal(textField.get('error'), undefined);
     assert.equal(textField.get('isValid'), true);
     assert.equal(textField.$().hasClass('error'), false);
   });
   it('inputs have .error class when value becomes inValid', function() {
     person.validate(function(){
-      assert.equal(textField.get('value'), '');
+      assert.equal(textField.get('value'), null);
       assert.equal(textField.get('error'), '');
       assert.equal(textField.get('isValid'), false);
       assert.equal(textField.$().hasClass('error'), true);
