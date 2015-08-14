@@ -1,6 +1,6 @@
 {
   "name": "ember-error-support",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Apply error states to text fields",
   "dependencies": {
     "kelonye/ember": "1.9.1"
