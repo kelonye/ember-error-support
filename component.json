@@ -7,7 +7,7 @@
   },
   "development": {
     "timoxley/assert": "*",
-    "kelonye/ember-validate": "0.0.7"
+    "kelonye/ember-validate": "0.1.0"
   },
   "main": "lib/index.js",
   "scripts": [
